@@ -23,5 +23,5 @@ $(function() {
             val.refresh(values[i]);
         });
         i++;
-    }, 33);
+    }, 100);
 });
