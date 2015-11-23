@@ -1,0 +1,11 @@
+.gauge {
+    display: inline-block;
+}
+
+.gauge-box {
+    width: 200px;
+}
+
+.gauge-value {
+    font-size: 24px;
+}

@@ -1,15 +1,32 @@
 html.html {
     head {
-        link(rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+        link(rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css')
+        link(rel: 'stylesheet', type: 'text/css', href: 'assets/css/main.css')
         script(type: 'text/javascript', src: 'https://code.jquery.com/jquery-2.1.4.min.js')
-        script(type: 'text/javascript', src: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
-        script(type: 'text/javascript', src: 'assets/javascripts/lib/raphael-2.1.4.min.js')
-        script(type: 'text/javascript', src: 'assets/javascripts/lib/justgage-1.1.0.min.js')
+        script(type: 'text/javascript', src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js')
+        script(type: 'text/javascript', src: 'assets/javascripts/lib/gauge.min.js')
         script(type: 'text/javascript', src: 'assets/javascripts/app.js')
     }
 
-    div(id: 'gauge-speed', class: '200x160p') { }
-    div(id: 'gauge-rpm', class: '200x160p') { }
-    div(id: 'gauge-throttle', class: '200x160p') { }
-    div(id: 'gauge-brake', class: '200x160p') { }
+    div(class: 'container') {
+        div(class: 'gauge') {
+            canvas(id: 'gauge-speed', class: 'gauge-box')
+            p("Wululu", class: 'gauge-value text-center')
+        }
+
+        div(class: 'gauge') {
+            canvas(id: 'gauge-rpm', class: 'gauge-box')
+            p("Wululu", class: 'gauge-value text-center')
+        }
+
+        div(class: 'gauge') {
+            canvas(id: 'gauge-throttle', class: 'gauge-box')
+            p("Wululu", class: 'gauge-value text-center')
+        }
+
+        div(class: 'gauge') {
+            canvas(id: 'gauge-brake', class: 'gauge-box')
+            p("Wululu", class: 'gauge-value text-center')
+        }
+    }
 }
