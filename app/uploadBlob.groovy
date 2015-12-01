@@ -4,7 +4,7 @@ def blob = blobs["fileUpload"]
 response.status = 302
 
 if (blob) {
-    redirect "/success?key=${blob.keyString}"
+    redirect "/?key=${blob.keyString}"
 } else {
-    redirect "/failure"
+    redirect "/"
 }
