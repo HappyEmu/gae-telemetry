@@ -26,10 +26,12 @@ $(function() {
     });
 
     var circle = null;
+    var started = false;
 
     $('#map').on('load', function() {
         var svg = Snap('#map');
         circle = svg.circle(150, 150, 5);
+        started = true;
     });
 
     setInterval(function() {
@@ -38,6 +40,6 @@ $(function() {
             $(val.canvas).parent().find('.gauge-value').html(values[i] + " " + units[idx]);
         });
         i++;
-        circle.transform('translate(1,1)')
+        if (started) circle.transform('translate(1,1)')
     }, 33);
 });
