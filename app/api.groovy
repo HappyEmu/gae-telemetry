@@ -12,8 +12,6 @@ def filekey = datastore.execute {
 log.info("filekey=$filekey")
 
 BlobKey blob = new BlobKey(filekey[0].keyString)
-out.print("[")
 blob.withReader { Reader r ->
-    r.eachLine { line -> print("${line},") }
+    r.eachLine { line -> print(line) }
 }
-out.print("]")

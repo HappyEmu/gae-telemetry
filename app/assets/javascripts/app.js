@@ -7,6 +7,7 @@ $(function() {
     });
 
     var gaugeTexts = ["speed", "rpm", "throttle", "brake"];
+    var selector = [["carState", "mSpeed"], ["carState", "mRpm"], ["carState", "mThrottle"], ["carState", "mBrake"]];
     var units = ["km/h", "", "%", "%"];
 
     var gauges = $.map(gaugeTexts, function(val, i) {
@@ -36,8 +37,9 @@ $(function() {
 
     setInterval(function() {
         $.each(gauges, function(idx, val) {
-            val.set(values[i]);
-            $(val.canvas).parent().find('.gauge-value').html(values[i] + " " + units[idx]);
+            var value = values[i][selector[idx][0]][selector[idx][1]];
+            val.set(value);
+            $(val.canvas).parent().find('.gauge-value').html(value + " " + units[idx]);
         });
         i++;
         if (started) circle.transform('translate(1,1)')
