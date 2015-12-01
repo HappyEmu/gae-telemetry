@@ -2,8 +2,8 @@ $(function() {
     var values = null;
     var i = 0;
 
-    $.get('/api', function(data) {
-        values = data
+    $.ajax({
+        url: '/api', success: function(data) { values = data }, async: false
     });
 
     var gaugeTexts = ["speed", "rpm", "throttle", "brake"];
@@ -25,11 +25,19 @@ $(function() {
         return donut;
     });
 
+    var circle = null;
+
+    $('#map').on('load', function() {
+        var svg = Snap('#map');
+        circle = svg.circle(150, 150, 5);
+    });
+
     setInterval(function() {
         $.each(gauges, function(idx, val) {
             val.set(values[i]);
-            $(val.canvas).parent().find('.gauge-value').html(values[i] + " " + units[idx])
+            $(val.canvas).parent().find('.gauge-value').html(values[i] + " " + units[idx]);
         });
         i++;
-    }, 100);
+        circle.transform('translate(1,1)')
+    }, 33);
 });
