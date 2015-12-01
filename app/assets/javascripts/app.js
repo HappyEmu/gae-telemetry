@@ -44,4 +44,39 @@ $(function() {
         i++;
         if (started) circle.transform('translate(1,1)')
     }, 33);
+
+    // Setup player
+    var player;
+    $(document).on("yt:ready", function() {
+        console.log('YT API READY!');
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'f_uE9qlhxbA',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    });
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    var done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
 });
+
+function onYouTubeIframeAPIReady() {
+    $(document).trigger("yt:ready")
+}
