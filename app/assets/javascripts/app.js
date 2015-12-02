@@ -14,8 +14,8 @@ $(function() {
     var gaugeTexts = ["speed", "rpm", "throttle", "brake", "clutch", "steering"];
     var selector = [["carState", "mSpeed"], ["carState", "mRpm"], ["carState", "mThrottle"], ["carState", "mBrake"], ["carState", "mClutch"], ["carState", "mSteering"]];
     var units = ["km/h", "", "%", "%","%","%"];
-    var scalings = [3.6, 1, 100, 100, 100, 1];
-    var ranges = [[0,300],[0,8000],[0,100],[0,100],[0,100],[0,100]];
+    var scalings = [3.6, 1, 100, 100, 100, 100];
+    var ranges = [[0,300],[0,8000],[0,100],[0,100],[0,100],[-100,100]];
 
 
     var gauges = $.map(gaugeTexts, function(val, i) {
@@ -38,10 +38,12 @@ $(function() {
 
     var circle = null;
     var started = false;
-
+    var path = null;
 
     $('#map').on('load', function() {
         var svg = Snap('#map');
+        path = Snap('#map').node.firstElementChild;
+        console.log('svg path: ' + path);
         circle = svg.circle(150, 150, 5);
         started = true;
     });
@@ -76,7 +78,13 @@ $(function() {
             videoSecs = currentSecs;
             syncStreams(videoSecs);
         }
-        if (started) circle.transform('translate(1,1)')
+        if (started){
+
+            var point = path.getPointAtLength(values[i]['lapInfo']["mCurrentLapDistance"]);
+            console.log('Transforming circle ' + 'translate('+point.x+','+point.y+')');
+            circle.transform('translate('+point.x+','+point.y+')');
+            //circle.setAttribute('transform', 'translate(1,1)');
+        }
     }, 33);
 
     // Setup player
@@ -99,7 +107,7 @@ $(function() {
         $( "#StreamTime").html(telemetryTime);
 
         var offset = videoSeconds-telemetryTime + videoToTelemetryOffset;
-        console.log('TelemetryOffset: ' + videoToTelemetryOffset);
+
         $( "#Offset").html(offset);
         i += Number((offset * 30).toFixed(0));
         if (i<0)
