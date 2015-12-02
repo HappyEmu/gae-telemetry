@@ -12,33 +12,67 @@ html.html {
 
     div(class: 'container') {
         div(class: 'row') {
-            div(class: 'gauge') {
+            div(class: 'gauge-top') {
+                p("Speed", class: 'gauge-name text-center')
                 canvas(id: 'gauge-speed', class: 'gauge-box')
                 p("Wululu", class: 'gauge-value text-center')
             }
 
-            div(class: 'gauge') {
+            div(class: 'gauge-top') {
+                p("RPM", class: 'gauge-name text-center')
                 canvas(id: 'gauge-rpm', class: 'gauge-box')
                 p("Wululu", class: 'gauge-value text-center')
             }
 
-            div(class: 'gauge') {
+            div(class: 'gauge-top') {
+                p("Steering", class: 'gauge-name text-center')
+                canvas(id: 'gauge-steering', class: 'gauge-box')
+                p("Wululu", class: 'gauge-value text-center')
+            }
+
+            div(class: 'trackMap') {
+                object(type: 'image/svg+xml', id: 'map', data: 'assets/images/map.svg')
+            }
+
+            div(class: 'gauge-top') {
+                p("Clutch", class: 'gauge-name text-center')
+                canvas(id: 'gauge-clutch', class: 'gauge-box')
+                p("Wululu", class: 'gauge-value text-center')
+            }
+            div(class: 'gauge-top') {
+                p("Brake", class: 'gauge-name text-center')
+                canvas(id: 'gauge-brake', class: 'gauge-box')
+                p("Wululu", class: 'gauge-value text-center')
+            }
+            div(class: 'gauge-top') {
+                p("Throttle", class: 'gauge-name text-center')
                 canvas(id: 'gauge-throttle', class: 'gauge-box')
                 p("Wululu", class: 'gauge-value text-center')
             }
 
-            div(class: 'gauge') {
-                canvas(id: 'gauge-brake', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center')
-            }
+
         }
+
 
         div(class: 'row') {
-            div(class: 'map col-md-6') {
-                object(type: 'image/svg+xml', id: 'map', data: 'assets/images/map.svg')
+            div(class: 'gauge-top'){
+
+            }
+            div(id: 'player', class: 'vid')
+            div(class: 'gauge-top'){
+
             }
 
-            div(id: 'player', class: 'video col-md-6')
         }
+        p("VideoTime")
+        p("wululu", id: "VideoTime")
+        p("StreamTime")
+        p("wululu", id: "StreamTime")
+        p("Offset")
+        p("wululu", id: "Offset")
+        p("LapCount")
+        p("wululu", id: "LapTime")
+
     }
+
 }
