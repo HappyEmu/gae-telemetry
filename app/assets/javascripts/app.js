@@ -44,7 +44,7 @@ $(function() {
         var svg = Snap('#map');
         path = Snap('#map').node.firstElementChild;
         console.log('svg path: ' + path);
-        circle = svg.circle(150, 150, 5);
+        circle = svg.circle(0, 0, 5);
         started = true;
     });
 
@@ -79,9 +79,9 @@ $(function() {
             syncStreams(videoSecs);
         }
         if (started){
-
-            var point = path.getPointAtLength(values[i]['lapInfo']["mCurrentLapDistance"]);
-            console.log('Transforming circle ' + 'translate('+point.x+','+point.y+')');
+            var dist = (values[i]['lapInfo']["mCurrentLapDistance"]/(6997.82 / 4724.63525390625)/2.005 + 900) % (4724.63525390625/2.005);
+            var point = path.getPointAtLength(dist);
+            console.log('Transforming circle ' + dist +" / " + path.getTotalLength()/2);
             circle.transform('translate('+point.x+','+point.y+')');
             //circle.setAttribute('transform', 'translate(1,1)');
         }
