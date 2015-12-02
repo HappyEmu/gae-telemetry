@@ -11,11 +11,11 @@ $(function() {
         url: '/api/getTime', success: function(data) { videoToTelemetryOffset = data[0] }, async: false
     });
 
-    var gaugeTexts = ["speed", "rpm", "throttle", "brake", "clutch", "steering"];
-    var selector = [["carState", "mSpeed"], ["carState", "mRpm"], ["carState", "mThrottle"], ["carState", "mBrake"], ["carState", "mClutch"], ["carState", "mSteering"]];
-    var units = ["km/h", "", "%", "%","%","%"];
-    var scalings = [3.6, 1, 100, 100, 100, 100];
-    var ranges = [[0,300],[0,8000],[0,100],[0,100],[0,100],[-100,100]];
+    var gaugeTexts = ["speed", "rpm", "throttle", "brake", "gear", "steering"];
+    var selector = [["carState", "mSpeed"], ["carState", "mRpm"], ["carState", "mThrottle"], ["carState", "mBrake"], ["carState", "mGear"], ["carState", "mSteering"]];
+    var units = ["km/h", "", "%", "%","","%"];
+    var scalings = [3.6, 1, 100, 100, 1, 100];
+    var ranges = [[0,300],[0,8000],[0,100],[0,100],[0,6],[-100,100]];
 
 
     var gauges = $.map(gaugeTexts, function(val, i) {

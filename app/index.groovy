@@ -35,8 +35,8 @@ html.html {
             }
 
             div(class: 'gauge-top') {
-                p("Clutch", class: 'gauge-name text-center')
-                canvas(id: 'gauge-clutch', class: 'gauge-box')
+                p("Gear", class: 'gauge-name text-center')
+                canvas(id: 'gauge-gear', class: 'gauge-box')
                 p("Wululu", class: 'gauge-value text-center')
             }
             div(class: 'gauge-top') {
