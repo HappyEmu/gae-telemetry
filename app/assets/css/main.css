@@ -1,8 +1,16 @@
 .gauge-top {
     display: inline-block;
-    width: 12%;
+    width: 12.2%;
 }
-
+.sideBar{
+    display: inline-block;
+    width: 7%;
+}
+.gauge-side-top {
+    /*display: inline-block;*/
+    vertical-align:top;
+    width: 100%;
+}
 .gauge-box {
     width: 100%;
 }
@@ -13,8 +21,15 @@
 .gauge-name {
     font-size: 16px;
 }
+
+.gauge-valueSmall {
+    font-size: 16px;
+}
+.gauge-nameSmall {
+    font-size: 12px;
+}
 .vid{
-    width: 75%;
+    width: 85%;
     display: inline-block;
 }
 .trackMap{

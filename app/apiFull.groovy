@@ -16,8 +16,7 @@ def json = null
 BlobKey blob = new BlobKey(filekey[0].keyString)
 print("[")
 def first = true
-def linecount = 0
 blob.withReader { Reader r ->
-    r.eachLine { line -> if(linecount>1000){return};if(!first){print(',')};if(first){first = false}; print("$line"); linecount++ }
+    r.eachLine { line -> if(!first){print(',')};if(first){first = false}; print("$line");}
 }
 print("]")
