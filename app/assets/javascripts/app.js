@@ -142,6 +142,7 @@ $(function() {
             //console.log(" returned " )
             return 0;
         }
+        var value = null;
         $.each(selectors, function(depth, sel){
             if(depth==0) {
                 value = values[index][sel];
