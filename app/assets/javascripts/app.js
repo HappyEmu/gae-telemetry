@@ -97,10 +97,12 @@ $(function() {
     // Setup player
     var player;
     $(document).on("yt:ready", function() {
+        var colWidth = $('#vidContainer').width()
+
         console.log('YT API READY!');
         player = new YT.Player('player', {
-            height: '720',
-            width: '1280',
+            height: colWidth * 9 / 16,
+            width: colWidth,
             videoId: 'n38AwZUa_4Q',
             events: {
                 'onReady': onPlayerReady,
