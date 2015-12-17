@@ -136,14 +136,6 @@ html.html {
             }
 
         }
-        p("VideoTime")
-        p("wululu", id: "VideoTime")
-        p("StreamTime")
-        p("wululu", id: "StreamTime")
-        p("Offset")
-        p("wululu", id: "Offset")
-        p("LapCount")
-        p("wululu", id: "LapTime")
 
     }
 
