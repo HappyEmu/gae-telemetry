@@ -118,7 +118,7 @@ $(function() {
         $( "#Offset").html(offset);
         i += Number((offset * 30).toFixed(0));
         if (i<0)
-            i = 0
+            i = 0;
     }
 
     function onPlayerReady(event) {

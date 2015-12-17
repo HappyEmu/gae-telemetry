@@ -15,19 +15,19 @@ html.html {
             div(class: 'gauge-top') {
                 p("Speed", class: 'gauge-name text-center')
                 canvas(id: 'gauge-speed', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center value')
+                p("Use Chrome!", class: 'gauge-value text-center value')
             }
 
             div(class: 'gauge-top') {
                 p("RPM", class: 'gauge-name text-center')
                 canvas(id: 'gauge-rpm', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center value')
+                p("Use Chrome!", class: 'gauge-value text-center value')
             }
 
             div(class: 'gauge-top') {
                 p("Steering", class: 'gauge-name text-center')
                 canvas(id: 'gauge-steering', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center value')
+                p("Use Chrome!", class: 'gauge-value text-center value')
             }
 
             div(class: 'trackMap') {
@@ -37,17 +37,17 @@ html.html {
             div(class: 'gauge-top') {
                 p("Gear", class: 'gauge-name text-center')
                 canvas(id: 'gauge-gear', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center value')
+                p("Use Chrome!", class: 'gauge-value text-center value')
             }
             div(class: 'gauge-top') {
                 p("Brake", class: 'gauge-name text-center')
                 canvas(id: 'gauge-brake', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center value')
+                p("Use Chrome!", class: 'gauge-value text-center value')
             }
             div(class: 'gauge-top') {
                 p("Throttle", class: 'gauge-name text-center')
                 canvas(id: 'gauge-throttle', class: 'gauge-box')
-                p("Wululu", class: 'gauge-value text-center value')
+                p("Use Chrome!", class: 'gauge-value text-center value')
             }
 
 
@@ -59,33 +59,33 @@ html.html {
                 div(class: 'gauge-side-top') {
                     p("FL Tyre", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fl-tyre-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("FL brake", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fl-brake-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("FL slip", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fl-slip-speed', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
 
                 div(class: 'gauge-side-top') {
                     p("RL Tyre", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-rl-tyre-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("RL brake", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-rl-brake-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("RL slip", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-rl-slip-speed', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
             }
             div(id: 'player', class: 'vid')
@@ -93,45 +93,45 @@ html.html {
                 div(class: 'gauge-side-top') {
                     p("FR Tyre", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fr-tyre-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("FR brake", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fr-brake-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("FR slip", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fr-slip-speed', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
 
                 div(class: 'gauge-side-top') {
                     p("RR Tyre", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-rr-tyre-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("RR brake", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-rr-brake-temp', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
                 div(class: 'gauge-side-top') {
                     p("RR slip", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-rr-slip-speed', class: 'gauge-box')
-                    p("Wululu", class: 'gauge-valueSmall text-center value')
+                    p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
             }
 
         }
         p("VideoTime")
-        p("wululu", id: "VideoTime")
+        p("Use Chrome!", id: "VideoTime")
         p("StreamTime")
-        p("wululu", id: "StreamTime")
+        p("Use Chrome!", id: "StreamTime")
         p("Offset")
-        p("wululu", id: "Offset")
+        p("Use Chrome!", id: "Offset")
         p("LapCount")
-        p("wululu", id: "LapTime")
+        p("Use Chrome!", id: "LapTime")
 
     }
 
