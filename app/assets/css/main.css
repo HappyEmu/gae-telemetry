@@ -37,3 +37,11 @@
     display: inline-block;
     vertical-align:top;
 }
+
+body {
+    padding-top: 20px;
+}
+
+.shift {
+    padding-left: 8px;
+}

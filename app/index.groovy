@@ -11,7 +11,7 @@ html.html {
     }
 
     div(class: 'container') {
-        div(class: 'row') {
+        div(class: 'row shift') {
             div(class: 'gauge-top') {
                 p("Speed", class: 'gauge-name text-center')
                 canvas(id: 'gauge-speed', class: 'gauge-box')
@@ -55,7 +55,7 @@ html.html {
 
 
         div(class: 'row') {
-            div(class: 'sideBar'){
+            div(class: 'col-lg-1'){
                 div(class: 'gauge-side-top') {
                     p("FL Tyre", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fl-tyre-temp', class: 'gauge-box')
@@ -88,8 +88,20 @@ html.html {
                     p("Use Chrome!", class: 'gauge-valueSmall text-center value')
                 }
             }
-            div(id: 'player', class: 'vid')
-            div(class: 'sideBar'){
+            div(id: 'vidContainer', class: 'col-lg-10') {
+                div(id: 'player')
+                div(class: 'debug') {
+                    span("VideoTime")
+                    span("wululu", id: "VideoTime")
+                    span("StreamTime")
+                    span("wululu", id: "StreamTime")
+                    span("Offset")
+                    span("wululu", id: "Offset")
+                    span("LapCount")
+                    span("wululu", id: "LapTime")
+                }
+            }
+            div(class: 'col-lg-1'){
                 div(class: 'gauge-side-top') {
                     p("FR Tyre", class: 'gauge-nameSmall text-center')
                     canvas(id: 'gauge-fr-tyre-temp', class: 'gauge-box')
@@ -125,13 +137,13 @@ html.html {
 
         }
         p("VideoTime")
-        p("Use Chrome!", id: "VideoTime")
+        p("wululu", id: "VideoTime")
         p("StreamTime")
-        p("Use Chrome!", id: "StreamTime")
+        p("wululu", id: "StreamTime")
         p("Offset")
-        p("Use Chrome!", id: "Offset")
+        p("wululu", id: "Offset")
         p("LapCount")
-        p("Use Chrome!", id: "LapTime")
+        p("wululu", id: "LapTime")
 
     }
 
